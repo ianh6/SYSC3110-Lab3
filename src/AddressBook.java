@@ -34,5 +34,6 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         BuddyInfo badBud = addressBook.removeBuddy(0);
+        System.out.println("line");
     }
 }
