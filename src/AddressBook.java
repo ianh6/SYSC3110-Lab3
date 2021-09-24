@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * SYSC3110 Lab2
@@ -27,6 +28,16 @@ public class AddressBook {
             return buddies.remove(index);
         }
         return null;
+    }
+
+    public int findBuddy(BuddyInfo buddy) {
+        for (int i = 0; i < buddies.size(); i++) {
+            if (Objects.equals(buddy.getName(), buddies.get(i).getName())
+            && Objects.equals(buddy.getAddress(), buddies.get(i).getAddress())
+            && Objects.equals(buddy.getPhoneNum(), buddies.get(i).getPhoneNum()))
+            return i;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
